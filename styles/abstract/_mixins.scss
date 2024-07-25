@@ -4,7 +4,7 @@
 }
 
 @mixin ff-fs-color($ff-family, $f-size, $f-color){
-  font-family: $f-familly;
+  font-family: $ff-family;
   font-size: $f-size;
   color: $f-color;
 }

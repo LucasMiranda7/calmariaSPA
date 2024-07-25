@@ -24,6 +24,11 @@ header {
         text-decoration: none;
         @include mixins.ff-fs-color(variaveis.$ft-textos, 1rem,variaveis.$cor-primaria);
         font-weight: 500;
+        transition: 0.3s;
+        &:hover{
+          color: black;
+          font-weight: 900;
+        }
       }
     }
   }
@@ -56,11 +61,15 @@ header {
         border: none;
         outline: none;
         border-radius: 40px;
-        background-color: variaveis.$cor-secundaria;
-        color: rgba(255, 255, 255, 1);
+        background-color: #4e74ff73;
+        color: rgb(255, 255, 255);
         font-size: 1.3rem;
         font-weight: 600;
         font-family: variaveis.$ft-textos;
+        transition: 0.3s;
+        &:hover {
+          background-color: variaveis.$cor-secundaria;
+       }
        }
     }
     .img-home {

@@ -1,5 +1,35 @@
+@use '../abstract/variaveis';
 @use '../abstract/mixins';
 
 #nosso-espaco{
-  @include mixins.margem-central(80%)
+  @include mixins.margem-central(80%);
+  .detalhes {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    .imgs-espaco {
+      max-width: 500px;
+    }
+    .espaco-textos {
+      @extend .imgs-espaco;
+      .titulo {
+        @include mixins.ff-fs-color(variaveis.$ft-titulos, 1.8rem, variaveis.$cor-secundaria);
+        font-weight: 500;
+      }
+      .infos {
+        @include mixins.ff-fs-color(variaveis.$ft-textos, 1.2rem, variaveis.$cor-primaria);
+        font-weight: 500;
+      }
+      .separador{
+        width: 100%;
+      }
+    }
+    &:nth-child(2) { //& parent selector - faz referência ao elemento pai ao qual ele esta aninhado
+      flex-direction: row-reverse;
+    }
+  }
 }
+
